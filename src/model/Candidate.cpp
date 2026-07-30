@@ -1,19 +1,9 @@
 
-// model/Candidate.h
-#ifndef CANDIDATE_H
-#define CANDIDATE_H
+// model/Candidate.cpp
+#include "Candidate.h"
 
-#include <string>
+Candidate::Candidate() 
+    : candidate_id(""), name(""), email(""), phone("") {}
 
-class Candidate {
-public:
-    std::string candidate_id;
-    std::string name;
-    std::string email;
-    std::string phone;
-
-    Candidate();
-    Candidate(std::string id, std::string name, std::string email, std::string phone);
-};
-
-#endif // CANDIDATE_H
+Candidate::Candidate(std::string id, std::string name, std::string email, std::string phone)
+    : candidate_id(id), name(name), email(email), phone(phone) {}
